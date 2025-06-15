@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NUR SYAKINAH BINTI AZLAN - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Video Background -->
+  <video autoplay loop id="bg-video">
+    <source src="Keen Vid Background.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="content-overlay">
+    <header>
+      <h1 class="slide-in-text">౨ৎ NUR SYAKINAH BINTI AZLAN ౨ৎ</h1>
+      <nav>
+        <ul class="navbar">
+          <li><a href="home.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+          <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+          <li><a href="qualifications.html"><i class="fas fa-certificate"></i> Qualifications</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" onclick="toggleDropdown()"><i class="fas fa-heart"></i> Interest <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-content" id="dropdown-menu">
+              <li><a href="music.html"><i class="fas fa-music"></i> Music</a></li>
+              <li><a href="skills.html"><i class="fas fa-wand-magic-sparkles"></i> Skills</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>About Me</h2>
+        <div class="entry-card">
+          <p><strong>Hello and welcome!</strong></p>
+          <p>My name is <strong>Syakinah</strong>, and I'm currently pursuing a degree in <em>Library Management (Hons.)</em>. I have a growing passion for <strong>web development</strong> and <strong>data analysis</strong>.</p>
+        </div>
+
+        <div class="entry-with-image">
+          <img src="NUR SYAKINAH.jpg.jpg" alt="Photo of Nur Syakinah Binti Azlan">
+          <div class="entry-info">
+            <h3>"If you want it, you have to work for it"</h3>
+            <p>This website reflects my journey as a student and creator.</p>
+            <ul>
+              <li>📘 Highlighting my <strong>education</strong> and <strong>qualifications</strong></li>
+              <li>🎯 Showcasing my <strong>skills and growth</strong></li>
+              <li>💡 Sharing both academic and creative experiences</li>
+            </ul>
+
+            <p><strong>Things I enjoy:</strong></p>
+            <ul>
+              <li>💻 Exploring new technologies</li>
+              <li>🎨 Expressing creativity through design</li>
+              <li>📊 Solving real-world problems with data</li>
+            </ul>
+
+            <p><strong>Outside of studies, I love:</strong></p>
+            <ul>
+              <li>🎧 Music</li>
+              <li>🎬 Movies</li>
+              <li>⚽ Sports and staying active</li>
+              <li>🖼️ Art museums and visual inspiration</li>
+            </ul>
+
+            <h3>Contact Me</h3>
+            <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/60197821049" target="_blank">WhatsApp Me</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:nursyakinah@email.com">nursyakinah@email.com</a></p>
+
+            <p>🌟 <strong>Thank you for visiting!</strong> I hope you enjoy exploring my website.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Keen's Resume</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("dropdown-menu");
+      dropdown.classList.toggle("show");
+    }
+
+    window.addEventListener('click', function(e) {
+      const toggle = document.querySelector('.dropdown-toggle');
+      const dropdown = document.getElementById("dropdown-menu");
+      if (!toggle.contains(e.target)) {
+        dropdown.classList.remove("show");
+      }
+    });
+  </script>
+
+</body>
+</html>

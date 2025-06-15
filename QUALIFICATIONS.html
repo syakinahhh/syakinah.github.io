@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NUR SYAKINAH BINTI AZLAN - Qualifications</title>
+  <link rel="stylesheet" href="style qualifications.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- Background Video -->
+<video autoplay loop id="bg-video">
+  <source src="Keen Vid Background.mp4" type="video/mp4" />
+  Your browser does not support HTML5 video.
+</video>
+
+<!-- Content Overlay -->
+<div class="content-overlay">
+  <header>
+    <h1 class="slide-in-text">౨ৎ NUR SYAKINAH BINTI AZLAN ౨ৎ</h1>
+    <nav>
+      <ul class="navbar">
+        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+        <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+        <li><a href="qualifications.html" class="active"><i class="fas fa-certificate"></i> Qualifications</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" onclick="toggleDropdown()"><i class="fas fa-heart"></i> Interest <i class="fas fa-caret-down"></i></a>
+          <ul class="dropdown-content" id="dropdown-menu">
+            <li><a href="music.html"><i class="fas fa-music"></i> Music</a></li>
+            <li><a href="skills.html"><i class="fas fa-wand-magic-sparkles"></i> Skills</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>🎓 Certificates & Achievements</h2>
+
+      <div class="entry-card">
+        <h3>💻 STPM CGPA 3.59 </h3>
+        <p><strong>Institution:</strong> Maktab Sabah, Kota Kinabalu| <strong>Year:</strong> Aug 2022 - Apr 2024</p>
+        <p>🧠 General Studies- A-</p>
+        <p>🧠 History- A-</p>
+        <p>🧠 Malay- A-</p>
+        <p>🧠 Sport Science- B+</p>
+      </div>
+
+       <div class="entry-card">
+        <h3>💻 SPM </h3>
+        <p><strong>Institution:</strong> SMK Taman Fajar, Sandakan| <strong>Year:</strong> 2022 </p>
+        <p>🧠 English- B</p>
+        <p>🧠 Malay- B</p>
+        <p>🧠 History- A</p>
+        <p>🧠 Science- A</p>
+        <p>🧠 Islamic Studies- A</p>
+        <p>🧠 Tasawur Islam- A</p>
+        <p>🧠 Business- B+</p>
+        <p>🧠 Mathematics- D</p>
+      </div>
+
+      <div class="entry-card">
+        <h3>🎨Certification</h3>
+        <p> <strong>Year:</strong> 2022</p>
+        <p>🖼 Best Student Award: 1st in Class (2020-2021)</p>
+           🖼 Best Subject Award: Tasawur Islam (A) </p>
+           🖼 Top 5 in SPM (Trial)</p>
+           🖼 Top 15 in SPM</p>
+      </div>
+
+      <div class="entry-card">
+        <h3>🏅 Sports Achievements</h3>
+        <p>🌟 1st 1500M P/15- 2018</p>
+        <p>🌟 2nd 800M P/15- 2018</p>
+        <p>🌟 2nd 1500M P/18- 2019</p>
+        <p>🌟 2nd 800M P/18- 2019</p>
+        <p>🌟 13th Cross-country Race (16th Above Category)- 2018</p>
+        <p>🌟 1st Cross-country Race (18th Above Category)- 2019</p>
+        <p>🌟 14th Cross-country Race District Level (18th Above Category)- 2019</p>
+        <p>🌟 2nd Futsal, 6th Form Sports Carnival- 2022</p>
+        <p>🌟 4th Futsal, 6th Form Sports Carnival (State Level)- 2023</p>
+      </div>
+
+      <div class="entry-card">
+        <h3>🏆 National Cooking Finalist</h3>
+        <p><strong>Institution:</strong> Ministry of Education | <strong>Year:</strong> 2017</p>
+        <p>👩‍🍳 Represented Sabah and placed 4th nationally in a Malaysian school cooking competition held in Kelantan.</p>
+      </div>
+
+      <div class="entry-card">
+        <h3>📣 Public Speaking & Debate</h3>
+        <p><strong>Event:</strong> District Level English Debate | <strong>Year:</strong> 2019</p>
+        <p>🗣 Honed communication and teamwork skills as a substitute debater, representing school at district level.</p>
+      </div>
+    </section>
+
+    <!-- Gallery Area (NOT at the bottom) -->
+    <section class="gallery-section">
+      <h2>📸 Glimpses of My Achievements</h2>
+      <div class="gallery-row">
+        <div class="gallery-item">
+          <img src="STPM GRAD.jpg" alt="STPM CGPA Achievement of 3.0 and Above" />
+          <p>STPM CGPA achievement of 3.0 and above</p>
+        </div>
+        <div class="gallery-item">
+          <img src="CLASS GRAD.jpg" alt="STPM Classmates" />
+          <p>STPM CLASSMATES</p>
+        </div>
+        <div class="gallery-item">
+          <img src="SPM GRAD.jpg" alt="SPM Top 15 Achievement" />
+          <p>SPM Top 15 Achievement</p>
+        </div>
+        <div class="gallery-item">
+          <img src="AK.jpg" alt=" Special Excellence Award in Co-Curricular Activities" />
+          <p>Special Excellence Award in Co-Curricular Activities</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Keen's Resume</p>
+  </footer>
+</div>
+
+<script>
+  function toggleDropdown() {
+    document.getElementById("dropdown-menu").classList.toggle("show");
+  }
+  window.addEventListener("click", function (e) {
+    const toggle = document.querySelector(".dropdown-toggle");
+    const dropdown = document.getElementById("dropdown-menu");
+    if (!toggle.contains(e.target)) {
+      dropdown.classList.remove("show");
+    }
+  });
+</script>
+
+</body>
+</html>

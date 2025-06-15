@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Music Interests</title>
+  <link rel="stylesheet" href="style music.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video id="bg-video" autoplay loop muted>
+    <source src="Keen Vid Background.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Overlay Content -->
+  <div class="content-overlay">
+
+    <!-- Header & Navigation -->
+    <header>
+      <h1 class="slide-in-text">౨ৎSYAKINAH౨ৎ</h1>
+      <nav>
+        <ul class="navbar">
+          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+          <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+          <li><a href="qualifications.html"><i class="fas fa-certificate"></i> Qualifications</a></li>
+          <li class="dropdown">
+            <a onclick="toggleDropdown()" class="dropdown-toggle">
+              <i class="fas fa-heart"></i> Interests <i class="fas fa-caret-down"></i>
+            </a>
+            <ul id="dropdown-menu" class="dropdown-content">
+              <li><a href="music.html" class="active"><i class="fas fa-music"></i> Music</a></li>
+              <li><a href="skills.html"><i class="fas fa-wand-magic-sparkles"></i> Skills</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Music Play Button -->
+    <div class="music-button-container">
+      <button onclick="playMusic()" class="play-button">
+        <i class="fas fa-play"></i> Play Background Music
+      </button>
+      <div id="youtubePlayer" class="hidden"></div>
+    </div>
+
+    <!-- Music Section -->
+    <main>
+      <section>
+        <h2>What I Love to Listen To</h2>
+
+        <!-- Artist: Conan Gray -->
+        <div class="entry-with-image">
+          <img src="CONAN GRAY.jpg" alt="Conan Gray">
+          <div class="entry-info">
+            <h3>Conan Gray</h3>
+            <p>These two songs delve into the profound journey of overcoming comparison, embracing your worth, and the courage to give despite your own struggles. 
+              They illustrate the quest to find your voice in moments of invisibility and the resilience it takes to show up for others while honoring your own needs. It transcends love —
+               it celebrates identity, self-respect, and the empowering act of letting go.</p>
+            <ul>
+              <li>🎀 <a href="https://www.youtube.com/watch?v=Y4QGpJ6G8cM" target="_blank">The Cut That Always Bleeds</a></li>
+              <li>🎀 <a href="https://www.youtube.com/watch?v=6Lk6HqP1jZc" target="_blank">Heather</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Artist: Taylor Swift -->
+        <div class="entry-with-image">
+          <img src="TAYLOR SWIFT.jpg" alt="Taylor Swift">
+          <div class="entry-info">
+            <h3>Taylor Swift</h3>
+            <p>To me, this song transcends the theme of love, serving as a powerful reminder of self-worth and resilience. "Cardigan" reflects how we may 
+              sometimes feel overlooked or underestimated, yet we discover our strength in recognizing our own value, even when others may forget. "Fearless" embodies the 
+              spirit of stepping into confidence, embracing life and its challenges with courage,
+               despite our fears or vulnerabilities..</p>
+            <ul>
+              <li>🎀 <a href="https://www.youtube.com/watch?v=Ki9pYJwwawk" target="_blank">Cardigan</a></li>
+              <li>🎀 <a href="https://youtu.be/kYJVIoy_Xp4?si=WtZaXDLx1M-Admlc" target="_blank">Fearless</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Artist: Laufey -->
+        <div class="entry-with-image">
+          <img src="LAUFEY.jpg" alt="Laufey">
+          <div class="entry-info">
+            <h3>Laufey</h3>
+            <p>Laufey's song captures the soft, whimsical ache of unspoken affection. It's gentle and beautiful, reminding us that
+               sensitivity is not a weakness but a form of quiet strength. As someone often labeled too soft and sensitive, this song 
+               resonates deeply. I embrace that softness as a reflection of who I am..</p>
+            <ul>
+              <li>🎀 <a href="https://youtu.be/rHvQakk1zMA?si=UWC18d7ixsAtTOEG" target="_blank">From the Start</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Artist: The Marías -->
+        <div class="entry-with-image">
+          <img src="THE MARIAS.jpg" alt="The Marías">
+          <div class="entry-info">
+            <h3>The Marías</h3>
+            <p>This song captures the essence of embracing those overwhelming emotions and weighty thoughts, reminding me that there is 
+              comfort in fully experiencing it all..</p>
+            <ul>
+              <li>🎀 <a href="https://youtu.be/1BCqCgamowo?si=GbsTRlfFlMnNTd0V" target="_blank">Heavy</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Keen's Resume.</p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function toggleDropdown() {
+      document.getElementById("dropdown-menu").classList.toggle("show");
+    }
+
+    window.addEventListener("click", function (e) {
+      if (!document.querySelector('.dropdown-toggle').contains(e.target)) {
+        document.getElementById("dropdown-menu").classList.remove("show");
+      }
+    });
+
+    // YouTube Player Setup
+    let player;
+    function playMusic() {
+      if (!window.YT) {
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      } else {
+        onYouTubeIframeAPIReady();
+      }
+      document.getElementById("youtubePlayer").classList.remove("hidden");
+    }
+
+    function onYouTubeIframeAPIReady() {
+      if (player) {
+        player.playVideo();
+        return;
+      }
+
+      player = new YT.Player('youtubePlayer', {
+        height: '0',
+        width: '0',
+        videoId: 'zIeEz3V-afM', // Replace this with your desired YouTube video ID
+        playerVars: {
+          autoplay: 1,
+          loop: 1,
+          playlist: 'zIeEz3V-afM', // Required for loop
+          controls: 0,
+          showinfo: 0,
+          modestbranding: 1
+        },
+        events: {
+          onReady: function (event) {
+            event.target.setVolume(50);
+            event.target.playVideo();
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

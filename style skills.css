@@ -1,0 +1,201 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Background Video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 1;
+}
+
+/* Main Container */
+.content-overlay {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 14px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1.slide-in-text {
+  font-size: 2.4rem;
+  color: #2e67b1;
+  font-family: 'Lucida Handwriting', cursive;
+  animation: slideIn 1.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Navbar */
+nav ul.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #e0f0ff;
+  border-radius: 25px;
+  padding: 12px;
+}
+
+.navbar li {
+  position: relative;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1b3c5d;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: white;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #2a6fa5;
+  color: white;
+}
+
+/* Dropdown */
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 1;
+  padding: 8px 0;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content li {
+  list-style: none;
+  padding: 8px 16px;
+  margin: 0;
+}
+
+.dropdown-content li a {
+  display: block;
+  color: #1e3d59;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f0f8ff;
+}
+
+/* Skills Section */
+.skills-section h2 {
+  font-size: 1.8rem;
+  color: #2a6fa5;
+  margin-bottom: 25px;
+  border-bottom: 2px dashed #5fa8ec;
+  text-align: center;
+}
+
+.skill-card {
+  display: flex;
+  align-items: center;
+  background-color: #eef7ff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skill-card img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #7ea3e0;
+}
+
+.skill-info h3 {
+  font-size: 1.4rem;
+  color: #1b3c5d;
+  margin-bottom: 8px;
+}
+
+.skill-info p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skill-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skill-card img {
+    width: 100px;
+    height: 150px;
+  }
+
+  h1.slide-in-text {
+    font-size: 2rem;
+  }
+
+  .skills-section h2 {
+    font-size: 1.5rem;
+  }
+}

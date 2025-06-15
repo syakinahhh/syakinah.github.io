@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Education Background</title>
+  <link rel="stylesheet" href="style edu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Video Background -->
+  <video autoplay loop id="bg-video">
+    <source src="Keen Vid Background.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="content-overlay">
+    <header>
+      <h1 class="slide-in-text">౨ৎ NUR SYAKINAH BINTI AZLAN ౨ৎ</h1>
+      <nav>
+        <ul class="navbar">
+          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="education.html" class="active"><i class="fas fa-graduation-cap"></i> Education</a></li>
+          <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+          <li><a href="qualifications.html"><i class="fas fa-certificate"></i> Qualifications</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" onclick="toggleDropdown()"><i class="fas fa-heart"></i> Interest <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-content" id="dropdown-menu">
+              <li><a href="music.html"><i class="fas fa-music"></i> Music</a></li>
+              <li><a href="skills.html"><i class="fas fa-wand-magic-sparkles"></i> Skills</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Educational Background</h2>
+
+        <!-- Primary School -->
+        <div class="edu-card">
+          <h3>Primary School</h3>
+          <div class="school-entry">
+            <img src="SK TAMAN RIMBA.jpg" alt="SK Taman Rimba">
+            <div class="school-info">
+              <p><strong>School Name:</strong> SK Taman Rimba</p>
+              <p><strong>Years Attended:</strong> 2011 & 2013–2014</p>
+            </div>
+          </div>
+
+          <div class="school-entry">
+            <img src="SK TINUSA JAYA.jpg" alt="SK Tinusa Jaya">
+            <div class="school-info">
+              <p><strong>School Name:</strong> SK Tinusa Jaya</p>
+              <p><strong>Years Attended:</strong> 2012</p>
+            </div>
+          </div>
+
+          <div class="school-entry">
+            <img src="SK ULU SAPI.jpg" alt="SK Ulu Sapi">
+            <div class="school-info">
+              <p><strong>School Name:</strong> SK Ulu Sapi</p>
+              <p><strong>Years Attended:</strong> 2015–2016</p>
+              <p><strong>Grade:</strong> UPSR: 2A, 3B, 1D</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary School -->
+        <div class="edu-card">
+          <h3>Secondary School</h3>
+          <div class="school-entry">
+            <img src="SMK ULU SAPI.jpg" alt="SMK Ulu Sapi">
+            <div class="school-info">
+              <p><strong>School Name:</strong> SMK Ulu Sapi, Beluran</p>
+              <p><strong>Years Attended:</strong> 2017–2019</p>
+            </div>
+          </div>
+
+          <div class="school-entry double-pic">
+            <img src="SMK TAMAN FAJAR.jpg" alt="SMK Taman Fajar">
+            <img class="cute-pic big-cute" src="GRAD SPM.jpg" alt="Extra Fajar">
+            <div class="school-info">
+              <p><strong>School Name:</strong> SMK Taman Fajar, Sandakan</p>
+              <p><strong>Years Attended:</strong> 2020–2022</p>
+              <p><strong>Grade:</strong> SPM: 4A 3B+ 1D</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- High School -->
+        <div class="edu-card">
+          <h3>High School</h3>
+          <div class="school-entry double-pic">
+            <img src="SABAH COLLEGE CAMPUS.jpg" alt="Maktab Sabah">
+            <img class="cute-pic big-cute" src="GRAD STPM.jpg" alt="Extra Sabah">
+            <div class="school-info">
+              <p><strong>School Name:</strong> Maktab Sabah, Kota Kinabalu</p>
+              <p><strong>Years Attended:</strong> Aug 2022 – Apr 2024</p>
+              <p><strong>Grade:</strong> STPM: 3.59 (3A- 1B+)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- University -->
+        <div class="edu-card">
+          <h3>University</h3>
+          <div class="school-entry">
+            <img src="UiTM.jpg" alt="UiTM logo">
+            <div class="school-info">
+              <p><strong>University Name:</strong> Universiti Teknologi MARA</p>
+              <p><strong>Faculty:</strong> Faculty of Information Science</p>
+              <p><strong>Years Attended:</strong> 2024 – Present</p>
+              <p><strong>Grade:</strong> Semester 1: 3.13</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Keen's Resume.</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("dropdown-menu");
+      dropdown.classList.toggle("show");
+    }
+
+    window.addEventListener('click', function(e) {
+      const toggle = document.querySelector('.dropdown-toggle');
+      const dropdown = document.getElementById("dropdown-menu");
+      if (!toggle.contains(e.target)) {
+        dropdown.classList.remove("show");
+      }
+    });  </script>
+
+</body>
+</html>

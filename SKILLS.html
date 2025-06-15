@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Skills</title>
+  <link rel="stylesheet" href="style skills.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video id="bg-video" autoplay loop>
+    <source src="Keen Vid Background.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Content Overlay -->
+  <div class="content-overlay">
+    <header>
+      <h1 class="slide-in-text">౨ৎ NUR SYAKINAH BINTI AZLAN ౨ৎ</h1>
+      <nav>
+        <ul class="navbar">
+          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+          <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+          <li><a href="qualifications.html"><i class="fas fa-certificate"></i> Qualifications</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" onclick="toggleDropdown()">
+              <i class="fas fa-heart"></i> Interests <i class="fas fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-content" id="dropdown-menu">
+              <li><a href="music.html"><i class="fas fa-music"></i> Music</a></li>
+              <li><a href="skills.html" class="active"><i class="fas fa-wand-magic-sparkles"></i> Skills</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="skills-section">
+        <h2>My Skills</h2>
+
+        <!-- Technical / Academic Skills -->
+        <div class="skill-card">
+          <img src="kucing3.jpg" alt="Technical Skills">
+          <div class="skill-info">
+            <h3>Technical & Academic Skills</h3>
+            <p>✓ Proficient in Microsoft Office (Word, Excel, PowerPoint)<br>
+               ✓ Basic HTML and CSS for web design<br>
+               ✓ Knowledgeable in Library Systems like OPAC — I can also teach others how to use it effectively</p>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skill-card">
+          <img src="kucing2.jpg" alt="Soft Skills">
+          <div class="skill-info">
+            <h3>Soft Skills</h3>
+            <p>✓ Excellent communication — able to express thoughts clearly<br>
+               ✓ High empathy and attentive listener<br>
+               ✓ Strong teamwork spirit and collaboration<br>
+               ✓ Creative problem solving and effective time management — always meeting deadlines</p>
+          </div>
+        </div>
+
+        <!-- Creative & Personal Skills -->
+        <div class="skill-card">
+          <img src="kucing1.jpg" alt="Creative Skills">
+          <div class="skill-info">
+            <h3>Creative & Personal Skills</h3>
+            <p>✓ Design eye — good sense of layout and visual creativity<br>
+               ✓ Multilingual — speak Malay, English, and currently learning Japanese<br>
+               ✓ Passionate about writing — from essays to creative work<br>
+               ✓ Event organizing — experienced in planning small group activities</p>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Keen's Resume.</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("dropdown-menu");
+      dropdown.classList.toggle("show");
+    }
+
+    window.addEventListener('click', function(e) {
+      const toggle = document.querySelector('.dropdown-toggle');
+      const dropdown = document.getElementById("dropdown-menu");
+      if (!toggle.contains(e.target)) {
+        dropdown.classList.remove("show");
+      }
+    });
+  </script>
+</body>
+</html>

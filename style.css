@@ -1,0 +1,208 @@
+/* Reset and Basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* Video Background */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 1; /* Fully visible */
+}
+
+/* Overlay container */
+.content-overlay {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 14px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+h1.slide-in-text {
+  font-size: 2.5rem;
+  color: #2e67b1;
+  font-family: 'Lucida Handwriting', cursive;
+  animation: slideIn 1.5s ease;
+  margin-bottom: 15px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Navigation Bar */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #e0f0ff;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1b3c5d;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: white;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #2a6fa5;
+  color: white;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #d4e8f8;
+  border-radius: 10px;
+  top: 45px;
+  left: 0;
+  min-width: 160px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  z-index: 99;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px;
+  color: #1b3c5d;
+}
+
+.dropdown-content li a:hover {
+  background-color: #bcd9f3;
+}
+
+/* Section Styling */
+section h2 {
+  font-size: 1.8rem;
+  color: #2a6fa5;
+  border-bottom: 2px dashed #5fa8ec;
+  margin: 30px 0 20px;
+}
+
+.entry-card {
+  background: #eef7ff;
+  border-left: 5px solid #4a90e2;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+/* Image and Info Layout */
+.entry-with-image {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.entry-with-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #88baf7;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Info Content */
+.entry-info {
+  padding: 0 20px;
+}
+
+.entry-info h3 {
+  font-size: 1.4rem;
+  color: #2c5d94;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.entry-info ul {
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.entry-info li {
+  margin-bottom: 6px;
+}
+
+.entry-info a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.entry-info a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .entry-with-image img {
+    width: 160px;
+    height: 160px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+}
